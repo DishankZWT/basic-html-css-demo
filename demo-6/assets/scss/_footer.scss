@@ -1,0 +1,36 @@
+footer{
+    background-color: $footer-bgc;
+    font-family: $footer-font;
+    @include flexbox(row , space-around);
+
+    ul{
+        list-style: none;
+        align-content: center;
+        
+        a{
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+            position: relative;
+
+            span{
+                position: absolute;
+                left: 0; right: 0;
+                bottom: 0;
+                width: 0;
+                border-bottom: 2px solid;
+                transition: width .3s;
+            }
+
+            &:hover{
+                span{
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    img{
+        opacity: .3;
+    }
+}

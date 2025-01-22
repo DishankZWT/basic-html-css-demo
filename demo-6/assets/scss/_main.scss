@@ -1,0 +1,14 @@
+main{
+    font-family: $main-font;
+    @include flexbox(column , center);
+
+    .content{
+        @include flex-wrapper($main-bgc-1 , row , center);
+        padding: 12% 10% 7% 10%;
+        font-size: 50px;
+    }
+
+    .info{
+        @include flex-wrapper($main-bgc-2 , row , center);
+    }
+}

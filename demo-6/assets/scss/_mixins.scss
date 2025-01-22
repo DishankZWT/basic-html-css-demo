@@ -1,0 +1,13 @@
+@mixin flexbox($flex-direction , $justify-content){
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    align-content: center;
+}
+
+@mixin flex-wrapper($bgc , $flex-direction , $justify-content){
+    background-color: $bgc;
+    width: 100%;
+    @include flexbox($flex-direction , $justify-content);
+}

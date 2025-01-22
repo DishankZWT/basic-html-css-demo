@@ -1,0 +1,114 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color:antiquewhite;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+}
+
+.parent-box{
+    width: 90%;
+    height: 500px;
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    align-self: center;
+}
+
+.child-box{
+    width: 20%;
+    height: 20%;
+    background-color: yellowgreen;
+    border: 2px solid black;
+}
+
+a{
+    text-decoration: none;
+    color: tomato;
+}
+
+#link-1:hover ~ .parent-box{
+    justify-content: center;
+}
+#link-2:hover ~ .parent-box{
+    justify-content: start;
+}
+#link-3:hover ~ .parent-box{
+    justify-content:end;
+}
+#link-4:hover ~ .parent-box{
+    justify-content:space-between;
+}
+#link-5:hover ~ .parent-box{
+    justify-content: space-around;
+}
+#link-6:hover ~ .parent-box{
+    align-content: center;
+}
+#link-7:hover ~ .parent-box{
+    align-content:start;
+}
+#link-8:hover ~ .parent-box{
+    align-content:end;
+}
+
+.grid-layout{
+
+    display: grid;
+    grid-template-areas:
+        "myheader myheader myheader"
+        "myarticle myarticle myaside"
+        "mysection mysection myaside"
+        "myfooter myfooter myfooter";
+    grid-gap: 5px;
+    grid-template-columns:  1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr 2fr 1fr;
+}
+
+header{
+    grid-area: myheader;
+    background-color: yellowgreen;
+    border: 2px solid black;
+    align-content: center;
+    justify-items: center;
+}
+
+article{
+    grid-area: myarticle;
+    background-color: yellow;
+    border: 2px solid black;
+    align-content: center;
+    justify-items: center;
+}
+
+section{
+    grid-area: mysection;
+    background-color: sienna;
+    border: 2px solid black;
+    align-content: center;
+    justify-items: center;
+}
+
+footer{
+    grid-area: myfooter;
+    background-color: tomato;
+    border: 2px solid black;
+    align-content: center;
+    justify-items: center;
+}
+
+aside{
+    grid-area: myaside;
+    background-color: violet;
+    border: 2px solid black;
+    align-content: center;
+    justify-items: center;
+}
